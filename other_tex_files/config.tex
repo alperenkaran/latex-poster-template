@@ -1,0 +1,19 @@
+% make logo
+\newcommand{\makelogo}[4]{\node[xshift=#1, yshift=#2] at (TP@title) {\includegraphics[scale=#3]{#4}};}
+
+
+% line break in title
+\makeatletter
+\def\title#1{\gdef\@title{\begin{minipage}{\linewidth} \centering #1 \end{minipage}}}
+\makeatother
+
+
+% change font
+\renewcommand{\familydefault}{\sfdefault}
+
+% author, university and email
+\newcommand{\makeauthor}[4]{\parbox{#1}{\centering {\LARGE #2}  \vspace{-7mm} \linebreak {\Large #3}  \vspace{-7mm} \linebreak {\Large #4}}}
+
+
+% space between columns in \begin{multicols}{2} ... \end{multicols}
+\setlength{\columnsep}{1cm}
